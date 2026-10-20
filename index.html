@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Politique de confidentialité – Monday Tools</title>
+  <meta name="description" content="Politique de confidentialité de l'extension Monday Tools.">
+  <style>
+    :root {
+      --fg: #1f2330;
+      --muted: #5b6172;
+      --bg: #ffffff;
+      --accent: #0073ea;
+      --border: #e3e6ee;
+      --code-bg: #f4f6fa;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --fg: #e8eaf2;
+        --muted: #a3a9b8;
+        --bg: #14161c;
+        --accent: #4aa3ff;
+        --border: #2c3040;
+        --code-bg: #1d2029;
+      }
+    }
+    :root[data-theme="dark"] {
+      --fg: #e8eaf2;
+      --muted: #a3a9b8;
+      --bg: #14161c;
+      --accent: #4aa3ff;
+      --border: #2c3040;
+      --code-bg: #1d2029;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 40px 16px 64px;
+    }
+    h1 { font-size: 2rem; margin: 0 0 8px; }
+    h2 { font-size: 1.25rem; margin: 40px 0 12px; padding-top: 16px; border-top: 1px solid var(--border); }
+    h3 { font-size: 1.05rem; margin: 24px 0 8px; }
+    p, li { margin: 0 0 12px; }
+    ul { padding-left: 20px; }
+    a { color: var(--accent); }
+    .meta { color: var(--muted); font-size: 0.9rem; }
+    .lang-switch { font-size: 0.9rem; color: var(--muted); }
+    .lang-switch a { margin: 0 4px; }
+    .en { border-top: 2px solid var(--border); margin-top: 56px; padding-top: 8px; }
+    code { background: var(--code-bg); padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }
+    .note {
+      background: var(--code-bg);
+      border-left: 3px solid var(--accent);
+      padding: 12px 16px;
+      border-radius: 4px;
+      margin: 16px 0;
+    }
+    @media (max-width: 480px) {
+      h1 { font-size: 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+<main>
+
+  <p class="lang-switch"><a href="#fr">Français</a> · <a href="#en">English</a></p>
+
+  <!-- ==================== FRANÇAIS ==================== -->
+  <section id="fr" lang="fr">
+    <h1>Politique de confidentialité – Monday Tools</h1>
+    <p class="meta">Dernière mise à jour : [JJ/MM/AAAA]</p>
+
+    <p>
+      Monday Tools (« l'extension ») affiche les identifiants (ID) des colonnes, des éléments et des widgets
+      sur les boards Monday.com. La présente politique explique quelles données sont traitées, où elles sont
+      conservées et comment les supprimer.
+    </p>
+
+    <p class="note">
+      <strong>En bref :</strong> l'extension ne possède pas de serveur qui reçoit vos données de board.
+      Votre clé API Monday reste dans votre navigateur, chiffrée, et n'est envoyée qu'à l'API officielle de Monday.
+      Les seules données envoyées à un tiers concernent les paiements et les licences, gérés par ExtPay.
+    </p>
+
+    <h2>1. Données traitées</h2>
+
+    <h3>Clé API Monday</h3>
+    <p>
+      Pour fonctionner, l'extension demande votre clé API Monday. Elle est chiffrée avec AES-GCM 256 bits
+      avant d'être enregistrée dans le stockage local de votre navigateur. Elle n'est jamais transmise à un
+      serveur de l'extension.
+    </p>
+
+    <h3>Données de vos boards</h3>
+    <p>
+      Pour afficher les ID, l'extension lit auprès de l'API Monday les noms et identifiants des colonnes et des
+      éléments de vos boards. Ces informations sont mises en cache dans le stockage local de votre navigateur
+      afin d'accélérer l'affichage. Elles ne sont ni collectées ni conservées par l'auteur de l'extension.
+    </p>
+
+    <h3>Préférences</h3>
+    <p>
+      Langue, options d'affichage et état des panneaux sont enregistrés localement dans votre navigateur.
+    </p>
+
+    <h3>Paiements et licence (ExtPay)</h3>
+    <p>
+      Si vous achetez l'extension, le service de paiement <a href="https://extensionpay.com" rel="noopener">ExtPay</a>
+      traite votre adresse courriel et l'état de votre licence afin de vérifier votre accès. Le paiement est
+      effectué sur leur plateforme ; l'auteur de l'extension ne reçoit pas vos coordonnées bancaires.
+      Consultez la politique de confidentialité d'ExtPay pour le détail de leur traitement.
+    </p>
+
+    <h2>2. Ce que nous ne faisons pas</h2>
+    <ul>
+      <li>Aucun outil d'analyse ni de suivi publicitaire.</li>
+      <li>Aucune vente ni cession de données à des tiers.</li>
+      <li>Aucune donnée n'est utilisée pour évaluer la solvabilité ou à des fins de prêt.</li>
+      <li>Aucun accès à vos autres onglets ni à vos données hors de monday.com.</li>
+    </ul>
+
+    <h2>3. Communications réseau</h2>
+    <ul>
+      <li><strong>api.monday.com</strong> : requêtes à l'API officielle de Monday, avec votre clé API, pour valider la clé, lire les colonnes d'un board et retrouver le nom d'un élément par son ID.</li>
+      <li><strong>extensionpay.com</strong> : gestion des paiements et des licences (voir section 1).</li>
+    </ul>
+
+    <h2>4. Utilisation des permissions</h2>
+    <ul>
+      <li><code>storage</code> : enregistrer localement les préférences, la clé chiffrée et le cache des boards.</li>
+      <li><code>activeTab</code> : communiquer avec l'onglet Monday actif lorsque vous utilisez l'extension.</li>
+      <li><code>*.monday.com</code> : afficher les badges d'ID et le bouton dans la barre supérieure.</li>
+      <li><code>api.monday.com</code> : interroger l'API Monday avec votre clé.</li>
+    </ul>
+
+    <h2>5. Suppression de vos données</h2>
+    <ul>
+      <li>Supprimez la clé API à tout moment depuis les options de l'extension (« Supprimer la clé de ce Monday »).</li>
+      <li>Désinstaller l'extension supprime son stockage local, y compris la clé chiffrée et le cache.</li>
+      <li>Pour supprimer vos données de paiement ou de licence, contactez ExtPay ou l'auteur à l'adresse ci-dessous.</li>
+    </ul>
+
+    <h2>6. Enfants</h2>
+    <p>L'extension n'est pas destinée aux personnes de moins de 13 ans et ne collecte pas sciemment de données les concernant.</p>
+
+    <h2>7. Modifications</h2>
+    <p>Si cette politique change, la date en haut de page sera mise à jour. Les changements importants seront annoncés dans la description de l'extension.</p>
+
+    <h2>8. Contact</h2>
+    <p>Pour toute question : <a href="mailto:webxtl@hotmail.com">webxtl@hotmail.com</a></p>
+
+    <p class="meta">Monday Tools n'est pas affilié à Monday.com.</p>
+  </section>
+
+  <!-- ==================== ENGLISH ==================== -->
+  <section id="en" lang="en" class="en">
+    <h1>Privacy Policy – Monday Tools</h1>
+    <p class="meta">Last updated: [DD/MM/YYYY]</p>
+
+    <p>
+      Monday Tools (“the extension”) shows the IDs of columns, items and widgets on Monday.com boards.
+      This policy explains what data is processed, where it is kept and how to delete it.
+    </p>
+
+    <p class="note">
+      <strong>In short:</strong> the extension has no server that receives your board data.
+      Your Monday API key stays encrypted in your browser and is only sent to Monday's official API.
+      The only data sent to a third party concerns payments and licences, handled by ExtPay.
+    </p>
+
+    <h2>1. Data processed</h2>
+
+    <h3>Monday API key</h3>
+    <p>
+      To work, the extension asks for your Monday API key. It is encrypted with AES-GCM 256-bit before being
+      saved in your browser's local storage. It is never sent to a server operated by the extension.
+    </p>
+
+    <h3>Board data</h3>
+    <p>
+      To display IDs, the extension reads from Monday's API the names and identifiers of columns and items on
+      your boards. This information is cached in your browser's local storage to speed up display. It is not
+      collected or stored by the extension's author.
+    </p>
+
+    <h3>Preferences</h3>
+    <p>Language, display options and panel state are saved locally in your browser.</p>
+
+    <h3>Payments and licence (ExtPay)</h3>
+    <p>
+      If you purchase the extension, the payment service <a href="https://extensionpay.com" rel="noopener">ExtPay</a>
+      processes your email address and licence status to verify your access. Payment is made on their platform;
+      the extension's author does not receive your banking details. See ExtPay's privacy policy for how they
+      handle your data.
+    </p>
+
+    <h2>2. What we do not do</h2>
+    <ul>
+      <li>No analytics or advertising trackers.</li>
+      <li>No selling or transferring of data to third parties.</li>
+      <li>No data is used to determine creditworthiness or for lending.</li>
+      <li>No access to your other tabs or to data outside monday.com.</li>
+    </ul>
+
+    <h2>3. Network requests</h2>
+    <ul>
+      <li><strong>api.monday.com</strong>: requests to Monday's official API, with your API key, to validate the key, read board columns and look up an item name by its ID.</li>
+      <li><strong>extensionpay.com</strong>: payment and licence management (see section 1).</li>
+    </ul>
+
+    <h2>4. Use of permissions</h2>
+    <ul>
+      <li><code>storage</code>: save preferences, the encrypted key and the board cache locally.</li>
+      <li><code>activeTab</code>: communicate with the active Monday tab when you use the extension.</li>
+      <li><code>*.monday.com</code>: display ID badges and the top-bar button.</li>
+      <li><code>api.monday.com</code>: query Monday's API with your key.</li>
+    </ul>
+
+    <h2>5. Deleting your data</h2>
+    <ul>
+      <li>Delete the API key at any time from the extension's options (“Delete this Monday's key”).</li>
+      <li>Uninstalling the extension removes its local storage, including the encrypted key and the cache.</li>
+      <li>To delete payment or licence data, contact ExtPay or the author at the address below.</li>
+    </ul>
+
+    <h2>6. Children</h2>
+    <p>The extension is not intended for anyone under 13 and does not knowingly collect data from them.</p>
+
+    <h2>7. Changes</h2>
+    <p>If this policy changes, the date at the top will be updated. Significant changes will be announced in the extension's store listing.</p>
+
+    <h2>8. Contact</h2>
+    <p>For any question: <a href="mailto:webxtl@hotmail.com">webxtl@hotmail.com</a></p>
+
+    <p class="meta">Monday Tools is not affiliated with Monday.com.</p>
+  </section>
+
+</main>
+</body>
+</html>
